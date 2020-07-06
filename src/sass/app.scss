@@ -1,0 +1,212 @@
+$article1: #c5d8e5;
+$article2: #c4d2d8;
+$article3: #f6e8e2;
+$article4: #c9e2bb;
+$article5: #f2eee6;
+$article6: #e4e0de;
+$article7: #d0e2e9;
+$article8: #fcf6df;
+$article9: #f1ece3;
+$article10: #bfc9d7;
+$article12: #dee9e4;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    color: #333;
+    background: #f2f2f2;
+    line-height: 1.8em;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 30px;
+    position: relative;
+}
+
+article {
+    background: $article1;
+    padding: 80px 0;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1s5); 
+    
+    &.article--art1 {
+        background: $article2;
+    }
+    &.article--art2 {
+        background: $article3;
+    }
+    &.article--art3 {
+        background: $article4;
+    }
+    &.article--art4 {
+        background: $article5;
+    }
+    &.article--art5 {
+        background: $article6;
+    }
+    &.article--art6 {
+        background: $article7;
+    }
+    &.article--art7 {
+        background: $article8;
+    }
+    &.article--art8 {
+        background: $article9;
+    }
+    &.article--art10 {
+        background: $article10;
+    }
+    &.article--art12 {
+        background: $article12;
+    }
+    &.article--sign {
+        .row {
+            flex-direction: row !important;
+        }
+    }
+    .row {
+        justify-content: center;
+        align-items: center;
+    }
+    &:nth-child(even) {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
+    .count {
+        font-size: 24px;
+        line-height: 42px;
+        text-align: center;
+        position:absolute;
+        bottom: 100%;
+        left: 0;
+        opacity: 1;
+        background: white;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        font-weight: bold;
+        opacity: 0.5;
+        font-family: serif;
+        display: none;
+        small {
+            font-size: 70%;
+            line-height: 30px;
+        }
+    }
+    .text {
+        flex: 3;
+        padding: 0 30px;
+        @media screen and (max-width: 768px) {
+            padding: 0 0 40px;
+        }
+        h3 {
+            font-size: 32px;
+            letter-spacing: 0.05em;
+            line-height: 1.5em;
+            font-family: serif;
+            strong {
+                font-size: 150%;
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+        p {
+            font-size: 14px;
+            text-align: justify;
+        }
+    }
+    .form,
+    .image {
+        display: flex;
+        align-items: flex-end;
+        flex: 2;
+        box-sizing: border-box;
+        padding: 0 30px;
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+header {
+    padding: 80px 0;
+    h1 {
+        margin: 0 0 1em;
+        font-family: serif;
+        font-size: 60px;
+        line-height: 1em;
+    }
+    h2 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+footer {
+    font-size: 14px;
+    padding: 80px ;
+    background: #333;
+    color: #fff;
+    .row {
+        padding: 0 30px;
+        justify-content: space-between;
+        .col {
+            flex: 1;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    h5 {
+        font-size: 1.4em;
+        margin: 0 0 1em;
+        font-family: serif;
+    }
+    a {
+        color: #fff;
+    }
+}
+
+form {
+    .field {
+        margin: 0 0 1em;
+        input[type="text"] {
+            background: transparent;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+            box-sizing: border-box;
+        }
+        label {
+            font-size: 12px;
+        }
+    }
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}

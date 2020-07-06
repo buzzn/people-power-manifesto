@@ -1,0 +1,49 @@
+{% macro article(count, title, text, image) %}
+<article class="article--art{{ count }}">
+  <div class="wrap">
+    <div class="row">
+      <div class="text">
+        <h3><strong>{{count}}</strong>{{ title }}</h3>
+        {{ text | safe }}
+      </div>
+      <div class="image">
+        <img src="/images/{{ image }}" alt="{{ title }}">
+      </div>
+    </div>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro form(title, text) %}
+<article class="article--sign">
+  <div class="wrap">
+    <div class="row">
+      <div class="text">
+        <h3>{{ title }}</h3>
+        {{ text | safe }}
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name">
+          </div>
+          <div class="field">
+            <input type="text" name="company" placeholder="Firma (optional)">
+          </div>
+          <div class="field">
+            <input id="privacy_policy" type="checkbox" name="privacy_policy">
+            <label for="privacy_policy">Ich stimme den Datenschutzbestimmungen zu.</label>
+          </div>
+          <div class="field">
+            <input id="show_name" type="checkbox" name="show_name">
+            <label for="show_name">Mein voller Name darf unter den "Unterzeichneten" erscheinen.</label>
+          </div>
+          <div class="field">
+            <button type="submit">Unterzeichnen</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
+{% endmacro %}
